@@ -1,0 +1,1 @@
+# java-hibernate-24-spring
