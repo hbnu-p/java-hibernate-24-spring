@@ -1,11 +1,25 @@
 package pojo;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
 public class User {
 
     // 指定数据表中的主键
+    @Id
+    @GeneratedValue
     private int uid;
     private String name;
     private String address;
+
+    public User(){
+
+    }
+
+    public User(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
 
     public int getUid() {
         return uid;

@@ -7,6 +7,8 @@ import pojo.Name;
 import pojo.PhoneType;
 import pojo.User;
 
+import java.util.ArrayList;
+
 public class HibetnateTest {
     public static void main(String[] args) {
         // 构建session
@@ -20,17 +22,24 @@ public class HibetnateTest {
         // 打开事务
         Transaction transaction = session.beginTransaction();
 
-        Contact contact = new Contact();
-        contact.setId(7);
-        contact.setAddress("huangshi");
-        contact.setName(new Name("zhou","kangan"));
-        contact.getPhones().add("1761111");
-        contact.getPhones().add("1762222");
-        contact.getMap().put(0,"17611111");
-        contact.getMap().put(1,"17612222");
-        contact.setPhoneType(PhoneType.MOBILE);
+        // 不会写……
+//        Contact contact = new Contact();
+//        contact.setId(7);
+//        contact.setAddress("huangshi");
+//        contact.setName(new Name("zhou","kangan"));
+//        contact.getPhones().add("1761111");
+//        contact.getPhones().add("1762222");
+//        contact.getMap().put(0,"17611111");
+//        contact.getMap().put(1,"17612222");
+//        contact.setPhoneType(PhoneType.MOBILE);
 
-        session.save(contact);
+        // 能运行……
+        ArrayList <User> Users = new ArrayList<User>();
+        session.persist(new User("Luna Sakurakouji","Sakura mansion"));
+        session.persist(new User("Ōkura Yūsei","Sakura mansion"));
+        session.persist(new User("Kokura Asahi","Sakura mansion"));
+        // 新版本把 save（保存） 改成了 persist（持久化）
+
 
         transaction.commit();
         session.close();

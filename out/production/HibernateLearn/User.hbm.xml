@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!-- 对象关系映射配置
+     name:对象类型
+     table：对应的数据表-->
+    <class name="pojo.User" table="hbnu">
+        <!-- 配置id
+         cloumn 字段名称，可以省略使用默认的字段-->
+        <id name="uid" column="id">
+            <generator class="native"></generator>
+        </id>
+        <!-- 配置其它属性 -->
+        <property name="name" column="username"></property>
+        <property name="address"/>
+    </class>
+</hibernate-mapping>
