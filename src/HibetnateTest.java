@@ -23,15 +23,15 @@ public class HibetnateTest {
         Transaction transaction = session.beginTransaction();
 
         // 不会写……
-//        Contact contact = new Contact();
-//        contact.setId(7);
-//        contact.setAddress("huangshi");
-//        contact.setName(new Name("zhou","kangan"));
-//        contact.getPhones().add("1761111");
-//        contact.getPhones().add("1762222");
-//        contact.getMap().put(0,"17611111");
-//        contact.getMap().put(1,"17612222");
-//        contact.setPhoneType(PhoneType.MOBILE);
+        Contact contact = new Contact();
+        contact.setId(7);
+        contact.setAddress("huangshi");
+        contact.setName(new Name("zhou","kangan"));
+        contact.getPhones().add("1761111");
+        contact.getPhones().add("1762222");
+        contact.getMap().put(0,"17611111");
+        contact.getMap().put(1,"17612222");
+        contact.setPhoneType(PhoneType.MOBILE);
 
         // 能运行……
         ArrayList <User> Users = new ArrayList<User>();
