@@ -25,5 +25,7 @@
      <mapping resource="User.hbm.xml"/>
     <!-- 加载注解类 -->
     <mapping class="pojo.Contact"/>
+
+    <mapping class="association.Student"/>
   </session-factory>
 </hibernate-configuration>
