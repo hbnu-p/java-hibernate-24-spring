@@ -1,5 +1,7 @@
 package association;
 
+import pojo.Contact;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,7 +11,7 @@ public class Student {
     private int id;
     private String name;
     @ManyToOne
-    private StudentClass studentClass;
+    private Contact contact;
 
     public int getId() {
         return id;
